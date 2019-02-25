@@ -27,3 +27,5 @@ const newData = (pokeData) => {
  }
 
  window.onload = newData(pokeData);
+
+
