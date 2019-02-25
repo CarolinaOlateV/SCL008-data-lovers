@@ -11,49 +11,40 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Pok%C3%A9mon_GO_logo.svg/1280px-Pok%C3%A9mon_GO_logo.svg.png" style="width: 120px;" alt="Logo Pokémon GO">
   </div>
   <!--Aquí la barra de menú-->
+<div>
   <ul class="nav nav-tabs">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tipos</a>
-        <div class="dropdown-menu">
-          <!-- <a class="dropdown-item" href="#">Planta</a>
-          <a class="dropdown-item" href="#">Veneno</a>
-          <a class="dropdown-item" href="#">Fuego</a>
-          <a class="dropdown-item" href="#">Volador</a>
-          <a class="dropdown-item" href="#">Agua</a>
-          <a class="dropdown-item" href="#">Insecto</a>
-          <a class="dropdown-item" href="#">Normal</a>
-          <a class="dropdown-item" href="#">Electrico</a>
-          <a class="dropdown-item" href="#">Tierra</a>
-          <a class="dropdown-item" href="#">Lucha</a>
-          <a class="dropdown-item" href="#">Psíquico</a>
-          <a class="dropdown-item" href="#">Roca</a>
-          <a class="dropdown-item" href="#">Hielo</a>
-          <a class="dropdown-item" href="#">Fantasma</a>
-          <a class="dropdown-item" href="#">Dragón</a>--> 
-          <button type="button" class="btn btn-outline-primary">Planta</button>
-          <button type="button" class="btn btn-outline-primary">Veneno</button>
-          <button type="button" class="btn btn-outline-primary">Fuego</button>
-          <button type="button" class="btn btn-outline-primary">Volador</button>
-          <button type="button" class="btn btn-outline-primary">Agua</button>
-          <button type="button" class="btn btn-outline-primary">Insecto</button>
-          <button type="button" class="btn btn-outline-primary">Normal</button>
-          <button type="button" class="btn btn-outline-primary">Electrico</button>
-          <button type="button" class="btn btn-outline-primary">Tierra</button>
-          <button type="button" class="btn btn-outline-primary">Lucha</button>
-          <button type="button" class="btn btn-outline-primary">Psíquico</button>
-          <button type="button" class="btn btn-outline-primary">Roca</button>
-          <button type="button" class="btn btn-outline-primary">Hielo</button>
-          <button type="button" class="btn btn-outline-primary">Fantasma</button>
-          <button type="button" class="btn btn-outline-primary">Dragón</button>
-        </div> 
+     <li class="nav-item dropdown">
+        <section class="container">
+          <select id="category">
+          <option value="0"> Tipos</option>
+          <option value="1"> Planta</option>
+          <option value="2"> Veneno</option>
+          <option value="3"> Fuego</option>
+          <option value="4"> Volador</option>
+          <option value="5"> Agua</option>
+          <option value="6"> Insecto</option>
+          <option value="7"> Normal</option>
+          <option value="8"> Electrico</option>
+          <option value="9"> Tierra</option>
+          <option value="10"> Lucha</option>
+          <option value="11"> Psiquico</option>
+          <option value="12"> Roca</option>
+          <option value="13"> Hielo</option>
+          <option value="14"> Fantasma</option>
+          <option value="15"> Dragon</option>
+         </select>
       </li>
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ordenar de....</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">A - Z</a>
-            <a class="dropdown-item" href="#">Z - A</a>
-          </div>
-    </ul>
+          <div class="dropdown-menu"></div>
+            <section class="container"></section> 
+            <select id="order">
+            <option value ="letter"> Ordenar de </option> 
+            <option value="a">A - Z</option>
+            <option value="z">Z - A</option>
+          </select>
+        </li>
+     </ul>
+  </div>
     <div id="root" class="container-fluid"></div>
     <!-- <script src="./data/injuries/injuries.js"></script> -->
     <script src="./data/pokemon/pokemon.js"></script>
