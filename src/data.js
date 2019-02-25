@@ -2,9 +2,11 @@
 
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
-
-const example = () => {
-  return 'example';
+const filterData = (pokeData, condition) => {
+  const filtered = pokeData.filter(element => {
+    return element.type.includes(condition) === true;
+  })
+  return filtered;
 };
 
-window.example = example;
+window.filterData = filterData;

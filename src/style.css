@@ -7,6 +7,7 @@
     margin-top: 1rem;
     background: #00796B;
     border-radius: 17px;
+    height: 55px;
 }
 
 .nav-link {
@@ -30,4 +31,19 @@
     flex-flow: row wrap;
     justify-content: space-evenly;
   }
+  
+  #category,#order {
+      width: 150px;
+       height: 40px;
+       background-color: #EC0017;
+       color:white;
+       border: 1.5px solid rgb(255, 255, 255);
+       border-radius: 40px;
+       line-height: 1.3;
+       letter-spacing: 0.1em;
+       font-family: 'Actor', sans-serif;
+       font-size: 18px;
+       transition: all 1s ease;
+  }
+
   
