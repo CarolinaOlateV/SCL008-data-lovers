@@ -20,10 +20,11 @@ const newData = (pokeData) => {
 	 });
    return result;
  }
-
+//Filtrando
  document.getElementById('category').addEventListener('change',() => {
 	 let condition = document.getElementById('category').value;
 	 let filtered = window.filterData(pokeData, condition);
+	 //Limpiando div
 	 container.innerHTML = '';
 
 	 filtered.forEach(element => {
