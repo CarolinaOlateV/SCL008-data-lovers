@@ -8,5 +8,30 @@ const filterData = (pokeData, condition) => {
   })
   return filtered;
 };
-
+//Funcion para ordenar en forma alfabetica ascesdente los nombres de los pokemones
+function orderNameAz(pokeData) {
+  let pokemonesAz = pokeData;
+  pokemonesAz = ordenNameAz.sort((pokeData,name,orderNameAz) => {
+    if (a.name > b.name)
+      return 1
+    else
+      return -1
+  })
+  return pokemonesAz
+}
+//Funcion para ordenar en forma alfabetica descendente los nombres de los pokemones
+function orderNameZa(pokeData) {
+  let pokemonesZa = pokeData;
+  pokemonesZa = orderNameZa.sort((a, b) => {
+    if (a.name < b.name)
+      return 1
+    else
+      return -1
+  })
+  return pokemonesZa
+}
 window.filterData = filterData;
+window.orderNameAz= orderNameAz;
+window.orderNameZa =orderNameZa;
+
+
