@@ -31,7 +31,6 @@ function orderNameZa(pokeData) {
   return pokemonesZa
 }
 window.filterData = filterData;
-window.orderNameAz= orderNameAz;
-window.orderNameZa =orderNameZa;
+
 
 
