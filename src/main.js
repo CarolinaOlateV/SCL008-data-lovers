@@ -74,8 +74,27 @@ const newData = (pokeData) => {
   </div>
 </div>` 
 	 })
+	 
+ })
+ document.getElementById("sort").addEventListener("change", ()=>{
+ let condition = document.getElementById("sort").value;
+ let orderAz = window.sortData(pokeData,condition);
+ container.innerHTML = '';
+ 
+ orderAz.forEach(element => {
+		container.innerHTML += `<div>
+		<div class="card">
+		<div class="box">
+		<h2>${element.name}</h2>
+			<div class="img">
+				<img src="${element.img}" alt="${element.name}">
+				<p>Tipo:${element.type}</p>
+		</div>				 
+	</div>
+	</div>
+</div>` 
+})
  })
 
  window.onload = newData(pokeData);
-
-
+ 
