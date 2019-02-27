@@ -35,10 +35,44 @@ const newData = (pokeData) => {
 			 <div class="img">
 				 <img src="${element.img}" alt="${element.name}">
 				 <p>Tipo:${element.type}</p>
+				 <!-- Button trigger modal -->
+				 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal${element.id}">
+				 Ver perfil del pokémon
+				 </button>
 			 </div>				 
 		 </div>
 		 </div>
-	 </div>` 
+	 </div>
+	 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal${element.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">${element.name}</h5>
+      </div>
+			<div class="modal-body">
+			<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="${element.img}" class="card-img" alt="Imagen de ${element.name}">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p>Tipo: ${element.type}</p>
+        <p>Debilidad: ${element.weaknesses.join(', ')}</p>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>` 
 	 })
  })
 
