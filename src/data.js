@@ -8,12 +8,12 @@ const filterData = (pokeData, condition) => {
 };
 //Funcion para ordenar en forma alfabetica ascendente los nombres de los pokemones
 
-const sortData= (pokeData,name,nameaz);
+const sortData= (pokeData,name,nameaz)=>{
   const arrPokemonesNameAz = name.sort((a, b) => {
-  return a-b
+  return a.localeCompare(b);
   });
   return arrPokemonesNameAz;
-
+}
 
 window.filterData = filterData;
 window.sortData = sortData ;

@@ -95,6 +95,7 @@ const newData = (pokeData) => {
 </div>` 
 })
  })
+ 
 
  window.onload = newData(pokeData);
  
