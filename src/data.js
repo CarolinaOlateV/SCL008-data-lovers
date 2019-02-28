@@ -16,8 +16,6 @@ const sortData = (name,opcNameAz)=>{
      return arrOrderAz;
    };
 
-
-
 window.filterData = filterData;
 window.sortData = sortData;
 
