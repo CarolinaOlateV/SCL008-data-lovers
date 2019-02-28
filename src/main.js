@@ -76,12 +76,15 @@ const newData = (pokeData) => {
 	 })
 	 
  })
- document.getElementById("sort").addEventListener("change", ()=>{
- let condition = document.getElementById("sort").value;
- let orderAz = window.sortData(pokeData,condition);
- container.innerHTML = '';
- 
- orderAz.forEach(element => {
+ const opcOrder=document.getElementById('sort');
+	  opcOrder.addEventListener("change",() => {
+			let opcNameAz = document.getElementById('sort').value;
+			let arrOrderAz =window.sortData(pokeData,'name',opcNameAz);
+			
+		container.innerHTML = '';
+		
+
+ arrOrderAz.forEach(element => {
 		container.innerHTML += `<div>
 		<div class="card">
 		<div class="box">
