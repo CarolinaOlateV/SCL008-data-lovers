@@ -11,7 +11,8 @@ const newData = (pokeData) => {
              <div class="box">
              <h2>${element.name}</h2>
 				 <div class="img">
-                     <img src="${element.img}" alt="${element.name}">
+										 <img src="${element.img}" alt="${element.name}">
+										 <p>Número de pokémon: ${element.num}</p>
                      <p>Tipo:${element.type}</p>
 				 </div>				 
 			 </div>
@@ -35,6 +36,7 @@ const newData = (pokeData) => {
 			 <div class="img">
 				 <img src="${element.img}" alt="${element.name}">
 				 <p>Tipo:${element.type}</p>
+				 <p>Número de pokémon: ${element.num}</p>
 				 <!-- Button trigger modal -->
 				 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal${element.id}">
 				 Ver perfil del pokémon
@@ -77,7 +79,7 @@ const newData = (pokeData) => {
 	 
  })
  const opcOrder=document.getElementById('sort');
-	  opcOrder.addEventListener("change",() => {
+	  opcOrder.addEventListener('change',() => {
 			let opcNameAz = document.getElementById('sort').value;
 			let arrOrderAz =window.sortData(pokeData,'name',opcNameAz);
 			
@@ -91,6 +93,7 @@ const newData = (pokeData) => {
 		<h2>${element.name}</h2>
 			<div class="img">
 				<img src="${element.img}" alt="${element.name}">
+				<p>Número de pokémon:${element.num}</p> 
 				<p>Tipo:${element.type}</p>
 		</div>				 
 	</div>
