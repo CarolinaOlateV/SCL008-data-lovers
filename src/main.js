@@ -3,9 +3,9 @@ const container = document.getElementById('root');// donde contendre mis cartas 
 
 const newData = (pokeData) => {
 	let result = '';
-   pokeData.forEach(element => { //element representa al objeto que esta dentro de la data
- 
-	container.innerHTML += `
+	pokeData.forEach(element => { //element representa al objeto que esta dentro de la data
+
+		container.innerHTML += `
 		 <div>
 			 <div class="card">
              <div class="box">
@@ -16,19 +16,19 @@ const newData = (pokeData) => {
 				 </div>				 
 			 </div>
 			 </div>
-		 </div>` 
-	 });
-   return result;
- }
+		 </div>`
+	});
+	return result;
+}
 //Filtrando
- document.getElementById('category').addEventListener('change',() => {
-	 let condition = document.getElementById('category').value;
-	 let filtered = window.filterData(pokeData, condition);
-	 //Limpiando div
-	 container.innerHTML = '';
+document.getElementById('category').addEventListener('change', () => {
+	let condition = document.getElementById('category').value;
+	let filtered = window.filterData(pokeData, condition);
+	//Limpiando div
+	container.innerHTML = '';
 
-	 filtered.forEach(element => {
-		 container.innerHTML += `<div>
+	filtered.forEach(element => {
+		container.innerHTML += `<div>
 		 <div class="card">
 		 <div class="box">
 		 <h2>${element.name}</h2>
@@ -72,20 +72,17 @@ const newData = (pokeData) => {
       </div>
     </div>
   </div>
-</div>` 
-	 })
-	 
- })
- const opcOrder=document.getElementById('sort');
-	  opcOrder.addEventListener("change",() => {
-			let opcNameAz = document.getElementById('sort').value;
-			let arrOrderAz =window.sortData(pokeData,'name',opcNameAz);
-			
-		container.innerHTML = '';
-		
+</div>`
+	})
+})
 
- arrOrderAz.forEach(element => {
-		container.innerHTML += `<div>
+	document.getElementById('sort').addEventListener('change', () => {
+		let opcCondition = document.getElementById('sort').value;
+		let arrOrderAz = window.sortData(pokeData, 'name', orderName);
+		container.innerHTML = '';
+
+		arrOrderAz.forEach(element => {
+			container.innerHTML += `<div>
 		<div class="card">
 		<div class="box">
 		<h2>${element.name}</h2>
@@ -95,10 +92,10 @@ const newData = (pokeData) => {
 		</div>				 
 	</div>
 	</div>
-</div>` 
-})
- })
- 
+</div>`
+		})
+	})
 
- window.onload = newData(pokeData);
- 
+	
+
+	window.onload = newData(pokeData);
