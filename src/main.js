@@ -11,7 +11,8 @@ const newData = (pokeData) => {
              <div class="box">
              <h2>${element.name}</h2>
 				 <div class="img">
-                     <img src="${element.img}" alt="${element.name}">
+										 <img src="${element.img}" alt="${element.name}">
+										 <p>Número de pokémon: ${element.num}</p>
                      <p>Tipo:${element.type}</p>
 				 </div>				 
 			 </div>
@@ -35,6 +36,7 @@ document.getElementById('category').addEventListener('change', () => {
 			 <div class="img">
 				 <img src="${element.img}" alt="${element.name}">
 				 <p>Tipo:${element.type}</p>
+				 <p>Número de pokémon: ${element.num}</p>
 				 <!-- Button trigger modal -->
 				 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal${element.id}">
 				 Ver perfil del pokémon
@@ -72,13 +74,15 @@ document.getElementById('category').addEventListener('change', () => {
       </div>
     </div>
   </div>
-</div>`
-	})
-})
-
-	document.getElementById('sort').addEventListener('change', () => {
-		let opcCondition = document.getElementById('sort').value;
-		let arrOrderAz = window.sortData(pokeData, 'name', orderName);
+</div>` 
+	 })
+	 
+ })
+ const opcOrder=document.getElementById('sort');
+	  opcOrder.addEventListener('change',() => {
+			let opcNameAz = document.getElementById('sort').value;
+			let arrOrderAz =window.sortData(pokeData,'name',opcNameAz);
+			
 		container.innerHTML = '';
 
 		arrOrderAz.forEach(element => {
@@ -88,6 +92,7 @@ document.getElementById('category').addEventListener('change', () => {
 		<h2>${element.name}</h2>
 			<div class="img">
 				<img src="${element.img}" alt="${element.name}">
+				<p>Número de pokémon:${element.num}</p> 
 				<p>Tipo:${element.type}</p>
 		</div>				 
 	</div>

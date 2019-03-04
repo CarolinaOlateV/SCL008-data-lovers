@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon GO</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
@@ -35,24 +36,21 @@
          </select>
       </li>
       <li class="nav-item dropdown">
+        <div class="dropdown-menu"></div>
+          <section class="container"></section> 
+          <select class="order" id="sorting">
+            <option value="name">De que forma quieres ordenar..</option>
+            <option value="names">Nombres</option>
+            <option value="numbers">Números</option>
+          </select>
+        </li>
+      <li class="nav-item dropdown">
           <div class="dropdown-menu"></div>
             <section class="container"></section> 
             <select class="order" id="sort">
-              <option value="name"> Ordenar por</option>
-              <option value="orderName">Nombre</option>
-              <option value="orderNum">Número</option>
-            </select>
-        </li>
-        <li class="nav-item dropdown">
-          <div class="dropdown-menu"></div>
-            <section class="container"></section> 
-            <select class="order" id="options">
-              <option value="num"> Opciones</option>
-              <option value="nameAz">De A-Z</option>
-              <option value="nameZa">De Z-A</option>
-              <option value="ascendent">Del 1 al 151</option>
-              <option value="descendent">Del 151 al 1</option>
-
+              <option value="shape"> Ordenar de forma ascendente/descendente</option>
+              <option value="upward">De: A-Z</option>
+              <option value="falling">De: Z-A</option>
             </select>
         </li>
      </ul>
