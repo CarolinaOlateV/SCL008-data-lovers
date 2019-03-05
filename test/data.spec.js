@@ -3,10 +3,8 @@ global.assert = require('chai').assert;
 require('../src/data');
 require('./data.spec.js');
 
-// const data = window.POKEMON.pokemon;
-
 describe('filterData', () => {
-  const waterData = [
+  const data = [
     {
       name: 'Squirtle',
       type: 'Water'
@@ -22,11 +20,11 @@ describe('filterData', () => {
     {
       name: 'Psyduck',
       type: 'Water'
-    }
-
-  ]
-
-  const psychicData = [
+    },
+    {
+      name: 'Abra',
+      type: 'Psychic'
+    },
     {
       name: 'Mr. Mime',
       type: 'Psychic'
@@ -42,10 +40,7 @@ describe('filterData', () => {
   {
     name: 'Mew',
     type: 'Psychic'
-  }
-  ]
-
-  const fireData = [
+  },
     {
       name: 'Charmander',
       type: 'Fire'
@@ -61,6 +56,10 @@ describe('filterData', () => {
   {
     name: 'Ninetales',
     type: 'Fire'
+  },
+  {
+    name: 'Zubat',
+    type: 'Grass'
   }
   ]
   
@@ -69,15 +68,15 @@ describe('filterData', () => {
   });
 
   it('Debería retornar Squirtle como primer pokémon de tipo Agua', () => {
-    assert.equal(window.filterData(waterData,'Water')[0].name, 'Squirtle');
+    assert.equal(window.filterData(data,'Water')[0].name, 'Squirtle');//assert comprueba lo que estoy testeando y equal es el metodo que nos estrega chai
   });
 
   it('Debería retornar Mew como ultimo pokémon de tipo Psychic', () => {
-    assert.equal(window.filterData(psychicData,'Psychic')[3].name, 'Mew');
+    assert.equal(window.filterData(data,'Psychic')[4].name, 'Mew');
   });
 
   it('Debería retornar Charizard como segundo pokémon de tipo Fire', () => {
-    assert.equal(window.filterData(fireData,'Fire')[1].name, 'Charizard');
+    assert.equal(window.filterData(data,'Fire')[1].name, 'Charizard');
   });
 
   describe('sortData', () => {
@@ -86,6 +85,15 @@ describe('filterData', () => {
       assert.equal(typeof sortData, 'function');
     });
   })
+
+  it('Debería retornar Abra como primer pokémon de la A-Z', () => {
+    assert.equal(window.sortData(data,'name','a--z')[0].name, 'Abra');
+  })
+
+  it('Debería retornar Zubat como primer pokémon de la Z-A', () => {
+    assert.equal(window.sortData(data,'name','z--a')[0].name, 'Zubat');
+  })
+
 });
 
 
