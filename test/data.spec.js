@@ -94,6 +94,14 @@ describe('filterData', () => {
     assert.equal(window.sortData(data,'name','z--a')[0].name, 'Zubat');
   })
 
+  it('Debería retornar Vulpix como tercer pokémon de la Z-A', () => {
+    assert.equal(window.sortData(data,'name','z--a')[2].name, 'Vulpix');
+  })
+
+  it('Debería retornar Abra como ultimo pokémon de la Z-A', () => {
+    assert.equal(window.sortData(data,'name','z--a')[13].name, 'Abra');
+  })
+
 });
 
 
