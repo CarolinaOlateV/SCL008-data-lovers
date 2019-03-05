@@ -10,13 +10,13 @@ const filterData = (pokeData, condition) => {
 
 const sortData = (pokeData,sortBy,sortOrder)=>{
   
-  let arrOrderAz = pokeData.sort((a, b) => {
+  let orderAz = pokeData.sort((a, b) => {
     return a[sortBy].localeCompare(b[sortBy]);
      })
      if (sortOrder === "falling"){
-      arrOrderAz.reverse();
+      orderAz.reverse();
     }
-    return arrOrderAz;
+    return orderAz;
   }
 
 window.filterData = filterData;
