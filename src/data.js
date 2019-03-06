@@ -13,7 +13,7 @@ const sortData = (pokeData,sortBy,sortOrder)=>{
   let orderAz = pokeData.sort((a, b) => {
     return a[sortBy].localeCompare(b[sortBy]);
      })
-     if (sortOrder === "falling"){
+     if (sortOrder === "z--a"){
       orderAz.reverse();
     }
     return orderAz;
