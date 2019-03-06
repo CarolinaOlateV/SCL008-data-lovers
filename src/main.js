@@ -72,10 +72,9 @@ let opcNameAz = document.getElementById('sort').value;
 let arrOrderAz =window.sortData(pokeData,'name',opcNameAz);
 			
 		container.innerHTML = '';
-		
 
- arrOrderAz.forEach(element => {
-		container.innerHTML += `<div>
+		arrOrderAz.forEach(element => {
+			container.innerHTML += `<div>
 		<div class="card">
 		<div class="box">
 		<h2>${element.name}</h2>
@@ -86,10 +85,10 @@ let arrOrderAz =window.sortData(pokeData,'name',opcNameAz);
 		</div>				 
 	</div>
 	</div>
-</div>` 
-})
- })
- 
+</div>`
+		})
+	})
 
- window.onload = newData(pokeData);
- 
+	
+
+	window.onload = newData(pokeData);
