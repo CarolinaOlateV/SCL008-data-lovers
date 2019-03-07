@@ -1,76 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokémon GO</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div>
-    <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Pok%C3%A9mon_GO_logo.svg/1280px-Pok%C3%A9mon_GO_logo.svg.png" style="width: 120px;" alt="Logo Pokémon GO"></a>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon GO</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div>
+    <a href="index.html"><img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Pok%C3%A9mon_GO_logo.svg/1280px-Pok%C3%A9mon_GO_logo.svg.png"
+        style="width: 120px;" alt="Logo Pokémon GO"></a>
   </div>
   <!--Aquí la barra de menú-->
-<div>
+
+  <div class="container">
+    <div class="row">
   <ul class="nav nav-tabs">
-     <li class="nav-item dropdown">
-        <section class="container">
-          <select id="category" >
-          <option value="start" > Tipos</option>
-          <option value="Grass"> Planta</option>
-          <option value="Poison"> Veneno</option>
-          <option value="Fire"> Fuego</option>
-          <option value="Flying"> Volador</option>
-          <option value="Water"> Agua</option>
-          <option value="Bug"> Insecto</option>
-          <option value="Normal"> Normal</option>
-          <option value="Electric"> Electrico</option>
-          <option value="Ground"> Tierra</option>
-          <option value="Fighting"> Lucha</option>
-          <option value="Psychic"> Psiquico</option>
-          <option value="Rock"> Roca</option>
-          <option value="Ice"> Hielo</option>
-          <option value="Ghost"> Fantasma</option>
-          <option value="Dragon"> Dragon</option>
-         </select>
-         </section>
-      </li>
-      <li class="nav-item dropdown">
-        <div class="dropdown-menu"></div>
-          <section class="container"></section> 
-          <select class="order" id="sorting">
-            <option value="name">De que forma quieres ordenar..</option>
-            <option value="names">Nombres</option>
-            <option value="numbers">Números</option>
+    <li class="nav-item dropdown col-sm-12 col-md-4 col-lg-4">  
+          <select id="category">
+            <option value="start"> Filtrar Tipos</option>
+            <option value="Grass"> Planta</option>
+            <option value="Poison"> Veneno</option>
+            <option value="Fire"> Fuego</option>
+            <option value="Flying"> Volador</option>
+            <option value="Water"> Agua</option>
+            <option value="Bug"> Insecto</option>
+            <option value="Normal"> Normal</option>
+            <option value="Electric"> Electrico</option>
+            <option value="Ground"> Tierra</option>
+            <option value="Fighting"> Lucha</option>
+            <option value="Psychic"> Psiquico</option>
+            <option value="Rock"> Roca</option>
+            <option value="Ice"> Hielo</option>
+            <option value="Ghost"> Fantasma</option>
+            <option value="Dragon"> Dragon</option>
           </select>
-        </li>
-      <li class="nav-item dropdown">
-          <div class="dropdown-menu"></div>
-            <section class="container"></section> 
-            <select class="order" id="sort">
-              <option value="shape"> Ordenar de ascendente/descendente</option>
-              <option value="a--z">De: A-Z</option>
-              <option value="z--a">De: Z-A</option>
-            </select>
-        </li>
-     </ul>
-  </div>
+    </li>
+    <li class="nav-item dropdown col-sm-12 col-md-4 col-lg-4 ">
+      <select class="order" id="sorting">
+        <option value="name">Como quieres ordenar..</option>
+        <option value="names">Nombres</option>
+        <option value="numbers">Números</option>
+      </select>
+    </li>
+    <li class="nav-item dropdown col-sm-12 col-md-4 col-lg-4">
+      <select class="order" id="sort">
+        <option value="shape"> Ordenar asc/des</option>
+        <option value="a--z">De: A-Z</option>
+        <option value="z--a">De: Z-A</option>
+      </select>
+    </li>
+  </ul>
+</div>
+</div>
   <footer class="navbar text-white w-100">
-      <div class="container">
-        <p class="float-right">
-          <a class="go-up" href="#">Subir</a>
-        </p>
-        <p>Betsi Salas / Carolina Olate - Laboratoria 2019</p>
-    
-      </div>
-    </footer>
-    <div id="root" class="container-data"></div>
-    <script src="./data/pokemon/pokemon.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+    <div class="container">
+      <p class="float-right">
+        <a class="go-up" href="#">Subir</a>
+      </p>
+      <p>Betsi Salas / Carolina Olate - Laboratoria 2019</p>
+
+    </div>
+  </footer>
+  <div id="root" class="container-data"></div>
+  <script src="./data/pokemon/pokemon.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
