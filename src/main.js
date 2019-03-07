@@ -47,7 +47,7 @@ container.innerHTML += `<div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal${element.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-  <div class="row no-gutters">
+  <div class="carta no-gutters">
     <div class="col-md-4">
       <img src="${element.img}" class="card-img" alt="Imagen de ${element.name}">
     </div>
