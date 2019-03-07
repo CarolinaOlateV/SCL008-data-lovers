@@ -55,6 +55,9 @@ container.innerHTML += `<div>
       <div class="card-body">
         <p>Tipo: ${element.type}</p>
 				<p>Debilidad: ${element.weaknesses.join(', ')}</p>
+				<p>Caramelos: ${element.candy}</p>
+				<p>Caramelos para evolución: ${element.candy_count}</p>
+				<p>Aparece en huevo de: ${element.egg}</p>
 				<div class="modal-footer">
         <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
     </div>
