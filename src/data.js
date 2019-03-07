@@ -16,7 +16,17 @@ const sortData = (pokeData,sortBy,sortOrder)=>{
      if (sortOrder === "z--a"){
       orderAz.reverse();
     }
-    return orderAz;  
+    return orderAz;
+  },
+
+  computeStats = (pokeData, type) => {
+    let counter=0;
+    pokeData.forEach(function(element) {
+        if (element.type.includes(type)){
+            counter=counter+1;
+        }
+    }); 
+    return Math.round((counter/150)*100) +"%";     
 }
 
 
