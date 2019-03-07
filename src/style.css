@@ -61,10 +61,11 @@ body{
   
  .carta{
     background: #008695;
-    height: 450px;
+    height: 500px;
     width: 450px;
     margin-top: 4rem;
     color: white;
+    border-radius: 20px;
   }
 
     .navbar{

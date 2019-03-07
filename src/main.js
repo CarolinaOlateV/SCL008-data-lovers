@@ -91,6 +91,7 @@ let arrOrderAz =window.sortData(pokeData,'name',opcNameAz);
 </div>`
 		})
 	})
+	
 
 	
 

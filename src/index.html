@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +20,20 @@
   <div class="container">
     <div class="row">
   <ul class="nav nav-tabs">
+      <li class="nav-item dropdown col-sm-12 col-md-4 col-lg-4 ">
+          <select class="order" id="sorting">
+            <option value="name">Como quieres ordenar..</option>
+            <option value="names">Nombres</option>
+            <option value="numbers">Números</option>
+          </select>
+        </li>
+        <li class="nav-item dropdown col-sm-12 col-md-4 col-lg-4">
+            <select class="order" id="sort">
+              <option value="shape"> Ordenar asc/des</option>
+              <option value="a--z">De: A-Z</option>
+              <option value="z--a">De: Z-A</option>
+            </select>
+          </li>
     <li class="nav-item dropdown col-sm-12 col-md-4 col-lg-4">  
           <select id="category">
             <option value="start"> Filtrar Tipos</option>
@@ -40,25 +53,13 @@
             <option value="Ghost"> Fantasma</option>
             <option value="Dragon"> Dragon</option>
           </select>
-    </li>
-    <li class="nav-item dropdown col-sm-12 col-md-4 col-lg-4 ">
-      <select class="order" id="sorting">
-        <option value="name">Como quieres ordenar..</option>
-        <option value="names">Nombres</option>
-        <option value="numbers">Números</option>
-      </select>
-    </li>
-    <li class="nav-item dropdown col-sm-12 col-md-4 col-lg-4">
-      <select class="order" id="sort">
-        <option value="shape"> Ordenar asc/des</option>
-        <option value="a--z">De: A-Z</option>
-        <option value="z--a">De: Z-A</option>
-      </select>
-    </li>
+    </li>  
   </ul>
 </div>
 </div>
+
   <footer class="navbar text-white w-100">
+      <div id="calculo"></div>
     <div class="container">
       <p class="float-right">
         <a class="go-up" href="#">Subir</a>
