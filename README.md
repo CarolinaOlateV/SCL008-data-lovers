@@ -1,6 +1,6 @@
 # Data Lovers
 
-## Pokemon World
+## Pokemon Go!
 
 
 
@@ -87,16 +87,18 @@ Flujo de Usuario
 
  El paso siguiente corresponde al prototipado de baja definición, aquí comenzamos ideando e iterando sobre cómo debería verse la aplicación, y qué elementos debería contener para llegar al producto final.
  Luego de otorgado el desafío, comenzamos a idear la mejor forma de resolverlo, para eso hicimos los primeros bosquejos o wireframes del producto. Pensamos en poner boton para filtrar, y otro  para ordenar. Pero con el feedback de nuestro squak nos dimos cuenta que era poco practico y se veria muy recargada la aplicación. Finalmente decidimos hacer listas desplegables para las opciones de filtardo y ordenado.
- 
-Planificación
-Realizamos una planificación al comienzo del proyecto con tableros en la pizarra. Utilizamos Trello para digitalizar nuestra planificación.
 
-fotos del trello y pizarra aqui....
+ 
+ 
+## Planificación
+Realizamos una planificación al comienzo del proyecto con tableros en la pizarra. Utilizamos Trello para digitalizar nuestra planificación. 
+
+[Selecciona aqui](https://trello.com/b/rYe2a8ZX/pokemonego)
 
 
 #### FASE 3 Prototipo de alta fidelidad
-
-
+Prototipo en Figma
+[Selecciona aqui](https://www.figma.com/file/JsQsSqcJ6GN42gF2871VUaio/pokemon?node-id=49%3A3)
 
 
 #### Testeos de usabilidad
@@ -105,6 +107,8 @@ Durante el reto deberás realizar tests de usabilidad con distintos usuarios, y
 en base a los resultados de esos tests, deberás iterar tus diseños. Cuéntanos
 qué problemas de usabilidad detectaste a través de los tests y cómo los
 mejoraste en tu propuesta final.
+
+[Aqui algunas entrevistas a usuarios](https://www.useloom.com/share/3fb5d7678f004704840fbfd7019ed936)
 
 #### FASE 5 El Diseño final
 La meta del la aplicación web es crear un proceso rápido de resolución de búsqueda de un pokemon. La versión final esta disponible en versión demo.
