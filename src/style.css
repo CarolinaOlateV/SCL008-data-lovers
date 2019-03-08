@@ -10,6 +10,18 @@ body{
   background-size: cover;
 }
 
+.jumbotron{
+  margin-left: 250px;
+  width: 750px;
+  height: 200px;
+  background: #1D8696;
+  border-radius: 15px;
+  margin-top: 2%;
+  opacity: 0.9;
+  color: white;
+  font-size: 20px;
+}
+
 .nav {
     margin-top: 1rem;
     background: #00796B;
