@@ -10,16 +10,12 @@ body{
   background-size: cover;
 }
 
-.jumbotron{
-  margin-left: 250px;
-  width: 750px;
-  height: 200px;
+.fondo{
   background: #1D8696;
-  border-radius: 15px;
-  margin-top: 2%;
   opacity: 0.9;
-  color: white;
-  font-size: 20px;
+  border-radius: 10px; 
+  margin-top: 2rem;
+  width: 400px;
 }
 
 .nav {
@@ -96,7 +92,7 @@ body{
 footer{
   z-index: 100;
 }
-  
+
   
 
   
