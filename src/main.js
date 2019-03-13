@@ -78,7 +78,7 @@ container.innerHTML += `<div>
 </div>` 
 })
 })
-
+//ordenando alfabeticamente 
 const opcOrder=document.getElementById('sort');
 opcOrder.addEventListener('change',() => {
 let opcNameAz = document.getElementById('sort').value;
@@ -87,6 +87,29 @@ let arrOrderAz =window.sortData(pokeData,'name',opcNameAz);
 		container.innerHTML = '';
 
 		arrOrderAz.forEach(element => {
+			container.innerHTML += `<div>
+		<div class="card">
+		<div class="box">
+		<h2>${element.name}</h2>
+			<div class="img">
+				<img src="${element.img}" alt="${element.name}">
+				<p>Número de pokémon:${element.num}</p> 
+				<p>Tipo:${element.type}</p>
+		</div>				 
+	</div>
+	</div>
+</div>`
+		})
+	})
+	
+const numOrder=document.getElementById('order-num');
+numOrder.addEventListener('change',() => {
+let opcNum = document.getElementById('order-num').value;
+let num =window.sortData(pokeData,'num',opcNum);
+			
+		container.innerHTML = '';
+
+		num.forEach(element => {
 			container.innerHTML += `<div>
 		<div class="card">
 		<div class="box">

@@ -48,7 +48,7 @@ body{
   }
   
 
-  #category,#sorting,#sort {
+  #category,#sorting,#sort,#order-num {
     margin:10px auto;        
      border-radius: 17px;
      padding: 1%;
