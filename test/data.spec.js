@@ -161,5 +161,12 @@ describe('filterData', () => {
   })
 });
 
+describe('computeStats',() => {
+
+  it('Debería ser una función', () => {
+    assert.equal(typeof computeStats, 'function');
+  })
+});
+
 
 

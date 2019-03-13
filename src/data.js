@@ -19,8 +19,14 @@ const sortData = (pokeData,sortBy,sortOrder)=>{
     return orderAz;
   };
 
+  const computeStats = (pokeData, condition) => {
+    let result = filterData(pokeData, condition).length;
+    return result;
+  };
+
 window.filterData = filterData;
 window.sortData = sortData;
+window.computeStats = computeStats;
 
 
 

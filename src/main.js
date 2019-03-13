@@ -1,5 +1,6 @@
 const pokeData = window.POKEMON.pokemon;
 const container = document.getElementById('root');// donde contendre mis cartas con pokemon
+
 const newData = (pokeData) => {
 	let result = '';
    pokeData.forEach(element => { //element representa al objeto que esta dentro de la data
@@ -19,6 +20,14 @@ const newData = (pokeData) => {
 });
 return result;
 }
+const calcule = document.getElementById('category');
+calcule.addEventListener('click', () =>{
+let condition = calcule.value;
+let result = window.computeStats(pokeData,condition);
+container.innerHTML+=`<h3>Total</h3>
+<p>${result}</p>`
+})
+
 //Filtrando
 document.getElementById('category').addEventListener('change',() => {
 let condition = document.getElementById('category').value;
@@ -69,6 +78,7 @@ container.innerHTML += `<div>
 </div>` 
 })
 })
+
 const opcOrder=document.getElementById('sort');
 opcOrder.addEventListener('change',() => {
 let opcNameAz = document.getElementById('sort').value;
@@ -90,9 +100,6 @@ let arrOrderAz =window.sortData(pokeData,'name',opcNameAz);
 	</div>
 </div>`
 		})
-	})
-	
-
-	
+	})	
 
 	window.onload = newData(pokeData);
