@@ -168,5 +168,11 @@ describe('computeStats',() => {
   })
 });
 
+describe('numData', () => {
+  it('Debería ser una función', () => {
+    assert.equal(typeof numData, 'function');
+})
+});
+
 
 

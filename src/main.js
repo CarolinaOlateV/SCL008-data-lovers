@@ -20,6 +20,7 @@ const newData = (pokeData) => {
 });
 return result;
 }
+container.innerHTML = '';
 const calcule = document.getElementById('category');
 calcule.addEventListener('click', () =>{
 let condition = calcule.value;
@@ -105,7 +106,7 @@ let arrOrderAz =window.sortData(pokeData,'name',opcNameAz);
 const numOrder=document.getElementById('order-num');
 numOrder.addEventListener('change',() => {
 let opcNum = document.getElementById('order-num').value;
-let num =window.sortData(pokeData,'num',opcNum);
+let num =window.numData(pokeData,'num',opcNum);
 			
 		container.innerHTML = '';
 
