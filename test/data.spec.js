@@ -227,7 +227,7 @@ describe('computeStats',() => {
   })
 
   it('Debería retornar 3% de pokémones tipo agua', () => {
-    assert.equal(window.computeStats(data, 'Water'), "4");
+    assert.equal(window.computeStats(data, 'Water'), "3%");
   })
 });
 
