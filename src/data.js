@@ -30,10 +30,16 @@ const sortData = (pokeData,sortBy,sortOrder) => {
       return number;
     };
 
-  const computeStats = (pokeData, condition) => {
-    let result = filterData(pokeData, condition).length;
-    return result;
-  };
+    const computeStats = (pokeData, condition) => {
+      let counter=0;
+      pokeData.forEach(element => {
+          if (element.type.includes(condition)){
+              counter=counter+1;
+          }
+      });
+      return Math.round((counter/151)*100) +"%";
+         //al contador se la pasa la regla de 3 para sacar el porcentaje y luego se redondea con Math.round al numero mas cercano.
+     };
 
 window.filterData = filterData;
 window.sortData = sortData;

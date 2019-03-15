@@ -1,5 +1,6 @@
 const pokeData = window.POKEMON.pokemon;
 const container = document.getElementById('root');// donde contendre mis cartas con pokemon
+const resultCal = document.getElementById('resultado');
 
 const newData = (pokeData) => {
 	let result = '';
@@ -20,14 +21,19 @@ const newData = (pokeData) => {
 });
 return result;
 }
-container.innerHTML = '';
+
 const calcule = document.getElementById('category');
-calcule.addEventListener('click', () =>{
-let condition = calcule.value;
-let result = window.computeStats(pokeData,condition);
-container.innerHTML+=`<h3>Total</h3>
-<p>${result}</p>`
-})
+calcule.addEventListener('change', () =>{
+	let condition = calcule.value;
+	let porcentaje  = window.computeStats(pokeData,condition);
+	resultCal.innerHTML ='';
+	resultCal.innerHTML+=`
+		<div>
+		<h1>El porcentaje total de pokemones es de ${porcentaje} </h1>
+		</div>
+ `
+ 
+ })
 
 //Filtrando
 document.getElementById('category').addEventListener('change',() => {
@@ -84,7 +90,7 @@ const opcOrder=document.getElementById('sort');
 opcOrder.addEventListener('change',() => {
 let opcNameAz = document.getElementById('sort').value;
 let arrOrderAz =window.sortData(pokeData,'name',opcNameAz);
-			
+resultCal.innerHTML ='';
 		container.innerHTML = '';
 
 		arrOrderAz.forEach(element => {
